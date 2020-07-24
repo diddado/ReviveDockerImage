@@ -1,5 +1,5 @@
 FROM alpine
-MAINTAINER krish512 <krish512@hotmail.com>
+MAINTAINER jdhawk <jdhawk@dh0.net>
 
 WORKDIR /var/www/html
 
@@ -35,7 +35,7 @@ RUN apk --update add \
         php7-zip \
     && rm -rf /var/cache/apk/*
 
-RUN wget -qO- https://download.revive-adserver.com/revive-adserver-4.2.1.tar.gz | tar xz --strip 1 \
+RUN wget -qO- https://download.revive-adserver.com/revive-adserver-5.0.5.tar.gz | tar xz --strip 1 \
     && chown -R nobody:nobody . \
     && rm -rf /var/cache/apk/*
 

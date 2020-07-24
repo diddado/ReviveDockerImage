@@ -1,0 +1,19 @@
+version: '3.3'
+services:
+    revive:
+        build: .
+        image: dustin-hawkins/revivedockerimage
+        container_name: revive
+        ports:
+         - '8080:80'
+        restart: always
+        depends_on:
+                - mysql
+    mysql:
+        image: mysql:5.7
+        restart: always
+        environment:
+         - MYSQL_ROOT_PASSWORD=
+         - MYSQL_DATABASE=revive
+         - MYSQL_USER=user
+         - MYSQL_PASSWORD=password
