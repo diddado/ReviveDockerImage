@@ -2,7 +2,7 @@ version: '3.3'
 services:
     revive:
         build: .
-        image: dustin-hawkins/revive
+        image: dustinhawkins/revive
         container_name: revive
         ports:
          - '8080:80'
