@@ -1,6 +1,6 @@
-[![Docker Build Status](https://img.shields.io/docker/build/dustin-hawkins/revive.svg?style=for-the-badge)](https://hub.docker.com/r/dustin-hawkins/revive/)
-[![Docker Pulls](https://img.shields.io/docker/pulls/dustin-hawkins/revive.svg?style=for-the-badge)](https://hub.docker.com/r/dustin-hawkins/revive/)
-[![MicroBadger Size](https://img.shields.io/microbadger/image-size/dustin-hawkins/revive.svg?style=for-the-badge)](https://hub.docker.com/r/dustin-hawkins/revive/)
+[![Docker Build Status](https://img.shields.io/docker/build/dustinhawkins/revive.svg?style=for-the-badge)](https://hub.docker.com/r/dustinhawkins/revive/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/dustinhawkins/revive.svg?style=for-the-badge)](https://hub.docker.com/r/dustinhawkins/revive/)
+[![MicroBadger Size](https://img.shields.io/microbadger/image-size/dustinhawkins/revive.svg?style=for-the-badge)](https://hub.docker.com/r/dustinhawkins/revive/)
 
 # README #
 
@@ -18,5 +18,7 @@ Revive AdServer docker image based on Alpine Linux with nginx, php7-fpm and Revi
 ### How do I get set up? ###
 
 * Usage:
-    "docker pull dustin-hawkins/revive"
-    "
+    "docker pull dustinhawkins/revive"
+or
+    "docker-compose up"
+and visit http://localhost:8080
