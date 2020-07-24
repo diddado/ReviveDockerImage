@@ -19,6 +19,38 @@ Revive AdServer docker image based on Alpine Linux with nginx, php7-fpm and Revi
 
 * Usage:
     "docker pull dustinhawkins/revive"
-or
-    "docker-compose up"
-and visit http://localhost:8080
+
+### Docker Compose ###
+
+* Create a docker-compose.yml file, or use the one in the repository
+
+```
+version: '3.3'
+services:
+    revive:
+        build: .
+        image: dustinhawkins/revive
+        container_name: revive
+        ports:
+         - '8080:80'
+        restart: always
+        depends_on:
+                - mysql
+    mysql:
+        image: mysql:5.7
+        restart: always
+        environment:
+         - MYSQL_DATABASE=revive
+         - MYSQL_USER=user
+         - MYSQL_PASSWORD=password
+```
+
+`docker-compose up -d`
+
+Visit http://localhost:8080/ and complete the setup using the following for MySQL settings:
+
+* host = mysql
+* user = user
+* password = password 
+
+
