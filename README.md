@@ -1,35 +1,39 @@
-[![Docker Build Status](https://img.shields.io/docker/build/dustinhawkins/revive.svg?style=for-the-badge)](https://hub.docker.com/r/dustinhawkins/revive/)
-[![Docker Pulls](https://img.shields.io/docker/pulls/dustinhawkins/revive.svg?style=for-the-badge)](https://hub.docker.com/r/dustinhawkins/revive/)
-[![MicroBadger Size](https://img.shields.io/microbadger/image-size/dustinhawkins/revive.svg?style=for-the-badge)](https://hub.docker.com/r/dustinhawkins/revive/)
+[![Docker Build Status](https://img.shields.io/docker/build/diddado/revive.svg?style=for-the-badge)](https://hub.docker.com/r/diddado/revive/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/diddado/revive.svg?style=for-the-badge)](https://hub.docker.com/r/diddado/revive/)
+[![MicroBadger Size](https://img.shields.io/microbadger/image-size/diddado/revive.svg?style=for-the-badge)](https://hub.docker.com/r/diddado/revive/)
 
 # README #
 
-Revive AdServer docker image based on Alpine Linux with nginx, php7-fpm and Revive adserver 5.0.5
+Revive AdServer docker image based on Alpine Linux with nginx, php7-fpm and Revive adserver 5.1.1
 
 ### What is this repository for? ###
 
 * Quick summary:
-    Revive AdServer docker image based on Alpine Linux with nginx, php7-fpm and Revive Ad Server 5.0.5
+    Revive AdServer docker image based on Alpine Linux with nginx, php7-fpm and Revive Ad Server 5.1.1
 
-* Version 5.0.5
-* [Repository Link](https://github.com/dustin-hawkins/ReviveDockerImage.git)
+* Version 5.1.1
+* [Repository Link](https://github.com/diddado/ReviveDockerImage.git)
 
+### To build the image locally
+```bash
+./build.sh
+```
 
 ### How do I get set up? ###
-
-* Usage:
-    "docker pull dustinhawkins/revive"
+```bash
+docker pull diddado/revive
+```
 
 ### Docker Compose ###
 
 * Create a docker-compose.yml file, or use the one in the repository
 
-```
+```yml
 version: '3.3'
 services:
     revive:
         build: .
-        image: dustinhawkins/revive
+        image: diddado/revive
         container_name: revive
         ports:
          - '8080:80'
