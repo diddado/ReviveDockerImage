@@ -37,9 +37,9 @@ RUN apk --update add \
 
 
 # We want to make sure the md5 sum matches, if not fail the build since someone has modified the file.
-RUN set -o pipefail && wget -q https://download.revive-adserver.com/revive-adserver-5.1.1.tar.gz \
-    && if test `md5sum revive-adserver-5.1.1.tar.gz | cut -b-32` = "f97ad1c34a6a4bea0eecf7417bfa39c8"; then \
-    tar --strip 1 -zxf revive-adserver-5.1.1.tar.gz && rm -f revive-adserver-5.1.1.tar.gz \
+RUN set -o pipefail && wget -q https://download.revive-adserver.com/revive-adserver-5.2.0.tar.gz \
+    && if test `md5sum revive-adserver-5.2.0.tar.gz | cut -b-32` = "a6af2dedf80592137fa177f5cfed8061"; then \
+    tar --strip 1 -zxf revive-adserver-5.2.0.tar.gz && rm -f revive-adserver-5.2.0.tar.gz \
     && chown -R nobody:nobody . \
     && rm -rf /var/cache/apk/*; else exit 1; fi;
 
