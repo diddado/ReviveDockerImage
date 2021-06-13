@@ -1,3 +1,6 @@
 #!/bin/bash
+VERSION=5.2.1
 
-docker build -t diddado/revive:5.2.0 .
+docker build
+docker build -t diddado/revive:${VERSION} .
+docker push diddado/revive:${VERSION}
